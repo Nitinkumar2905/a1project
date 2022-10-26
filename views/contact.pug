@@ -1,0 +1,41 @@
+extends base.pug
+
+block scripts 
+    script(src='/static/index.js')
+
+block style 
+    style 
+        include ../static/style.css
+        include ../static/contact.css
+
+block content 
+    //- |This is contact 
+    section#container
+        h1.contact Contact Us
+        form.myForm(action="/contact" method="post")
+            div.input-tag  
+                label(for="name" class="label-tag") Name: 
+                input(type="text" id="name" class="myinput" name="name" placeholder="Name:" required) 
+            div.input-tag  
+                label(for="age" class="label-tag") Age: 
+                input(type="number" id="age" class="myinput" name="age" placeholder="Age:" required) 
+            div.input-tag  
+                label(for="phone" class="label-tag") Contact Number: 
+                input(type="number" id="phone" class="myinput" name="number" placeholder="Contact Number:" required maxlength="10") 
+            div.input-tag  
+                label(for="Email" class="label-tag") Email Id: 
+                input(type="Email" id="Email" class="myinput" name="email" placeholder="Email:" required) 
+            div.input-tag  
+                label(for="address" class="label-tag") Address: 
+                input(type="Address" id="address" class="myinput" name="address" placeholder="Address:" required) 
+            div.btn  
+                //- label(for="address" class="label-tag") Address: 
+                //- input(type="submit" id="submit" class="button" name="submit" placeholder="" required) 
+                input(type="submit", id="btn" name="submit" value="Submit")
+
+            //- button.btn Submit 
+
+        //- input(type="number" id="age" class="myinput" placeholder="Age") 
+        //- input(type="number" id="address" class="myinput" placeholder="Contact number") 
+        //- input(type="email" id="address" class="myinput" placeholder="Email") 
+        //- input(type="address" id="address" class="myinput" placeholder="Address") 

@@ -1,0 +1,29 @@
+extends base.pug
+
+block scripts 
+    scripts(src='../static/index.js')
+
+block style 
+    style
+      include ../static/style.css
+
+block content
+  section.main-container
+    section#introSection 
+      div Welcome to Dance Academy 
+      p  #{content}  
+   
+    section#missionSection 
+      div#head Our Mission
+      div.cards 
+        div.card 
+          h3 Classic Dance Classes 
+        div.card 
+          h3 Hip Hop Dance Classes 
+        div.card 
+          h3 Free Style Dance Classes
+
+    section#sponsorSection 
+      div#head Our  Sponsors 
+
+    
